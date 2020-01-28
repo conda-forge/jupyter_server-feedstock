@@ -15,7 +15,6 @@ build:
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - jupyter-server = jupyter_server.serverapp:main
-    - jupyter-extension = jupyter_server.extensions:main
     - jupyter-bundlerextension = jupyter_server.bundlerextensions:main
 
 requirements:
@@ -42,7 +41,6 @@ requirements:
 test:
   commands:
     - jupyter server -h
-    - jupyter extension -h
   imports:
     - jupyter_server
 
