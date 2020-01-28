@@ -1,6 +1,6 @@
 {% set name = "jupyter_server" %}
-{% set version = "0.1.1" %}
-{% set sha256 = "3eb8e6cccab8da5e13df954fb6e3544ad9b0591948fe1e017428824e23303888" %}
+{% set version = "0.2.1" %}
+{% set sha256 = "906ecd782925c78063db65dc17d30173372708e314e2a10b3c05366f743e9469" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,6 @@ build:
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - jupyter-server = jupyter_server.serverapp:main
-    - jupyter-extension = jupyter_server.extensions:main
     - jupyter-bundlerextension = jupyter_server.bundlerextensions:main
 
 requirements:
@@ -42,7 +41,6 @@ requirements:
 test:
   commands:
     - jupyter server -h
-    - jupyter extension -h
   imports:
     - jupyter_server
 
