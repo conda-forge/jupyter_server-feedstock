@@ -1,6 +1,6 @@
 {% set name = "jupyter_server" %}
-{% set version = "0.2.1" %}
-{% set sha256 = "906ecd782925c78063db65dc17d30173372708e314e2a10b3c05366f743e9469" %}
+{% set version = "0.3.0" %}
+{% set sha256 = "88d8ac1b399c83d01717bc73002f03999f217df66c09a1c97ef968a994f57e4c" %}
 
 package:
   name: {{ name|lower }}
@@ -11,32 +11,32 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
     - jupyter-server = jupyter_server.serverapp:main
     - jupyter-bundlerextension = jupyter_server.bundlerextensions:main
+  skip: true  # [py36]
 
 requirements:
   host:
     - python
     - pip
   run:
-    - ipykernel
+    - python
     - ipython_genutils
     - jinja2
     - jupyter_core >=4.4.0
-    - jupyter_client >=5.3.1
+    - jupyter_client >=6.1.1
     - nbconvert
     - nbformat
-    - python
     - pyzmq >=17
     - send2trash
-    - terminado >=0.8.1
-    - tornado >=4
+    - terminado >=0.8.3
+    - tornado >=5.0
     - traitlets >=4.2.1
     - prometheus_client
-    - ipaddress  # [py2k]
+    - pywin32 >=1.0  # [win]
 
 test:
   commands:
@@ -49,8 +49,8 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: COPYING.md
-  summary: 'Jupyter Server'
-  description: 'The Jupyter Server provides the backend for Jupyter web applications such as the Jupyter notebook and JupyterLab.'
+  summary: Jupyter Server
+  description: The Jupyter Server provides the backend for Jupyter web applications such as the Jupyter notebook and JupyterLab.
   dev_url: https://github.com/jupyter/jupyter_server
 
 extra:
