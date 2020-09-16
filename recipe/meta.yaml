@@ -16,27 +16,27 @@ build:
   entry_points:
     - jupyter-server = jupyter_server.serverapp:main
     - jupyter-bundlerextension = jupyter_server.bundlerextensions:main
+  skip: true  # [py36]
 
 requirements:
   host:
     - python
     - pip
   run:
-    - ipykernel
+    - python
     - ipython_genutils
     - jinja2
     - jupyter_core >=4.4.0
-    - jupyter_client >=5.3.1
+    - jupyter_client >=6.1.1
     - nbconvert
     - nbformat
-    - python
     - pyzmq >=17
     - send2trash
-    - terminado >=0.8.1
-    - tornado >=4
+    - terminado >=0.8.3
+    - tornado >=5.0
     - traitlets >=4.2.1
     - prometheus_client
-    - ipaddress  # [py2k]
+    - pywin32 >=1.0  # [win]
 
 test:
   commands:
