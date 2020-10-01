@@ -172,6 +172,7 @@ Feedstock Maintainers
 
 * [@SylvainCorlay](https://github.com/SylvainCorlay/)
 * [@blink1073](https://github.com/blink1073/)
+* [@jasongrout](https://github.com/jasongrout/)
 * [@maartenbreddels](https://github.com/maartenbreddels/)
 * [@minrk](https://github.com/minrk/)
 
