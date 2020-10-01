@@ -1,6 +1,6 @@
 {% set name = "jupyter_server" %}
-{% set version = "1.0.1" %}
-{% set sha256 = "1c4ce65d46dc6e37f6f05467bbedefce2fc55e7b1bb8895db902317f065df1e5" %}
+{% set version = "1.0.3" %}
+{% set sha256 = "d65f63d2de788b8a2cba6f7fc4c63940d8aca494713e36a6535bde21c1583620" %}
 
 package:
   name: {{ name|lower }}
@@ -59,3 +59,4 @@ extra:
     - maartenbreddels
     - blink1073
     - minrk
+    - jasongrout
