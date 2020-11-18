@@ -1,6 +1,6 @@
 {% set name = "jupyter_server" %}
-{% set version = "1.0.5" %}
-{% set sha256 = "04750c3a9d1888e2848f3c9851314ffb3d4aebd0cb650f4906e9381384de859a" %}
+{% set version = "1.0.6" %}
+{% set sha256 = "74adb51b7570fa72026558920989588ff787bed0d2ec81675b66c9340d2c764a" %}
 
 package:
   name: {{ name|lower }}
