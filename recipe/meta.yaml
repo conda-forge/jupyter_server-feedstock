@@ -1,22 +1,23 @@
 {% set name = "jupyter_server" %}
 {% set version = "1.0.8" %}
-{% set sha256 = "58913ab2dac9dd85d5a00d71a4735f745b1fc823217a60eaad1881d0837380b6" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 58913ab2dac9dd85d5a00d71a4735f745b1fc823217a60eaad1881d0837380b6
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  noarch: python
+  number: 1
+  script:
+    - {{ PYTHON }} -c "__import__('shutil').rmtree('tests')"
+    - {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
     - jupyter-server = jupyter_server.serverapp:main
     - jupyter-bundlerextension = jupyter_server.bundlerextensions:main
-  skip: true  # [py36]
 
 requirements:
   host:
@@ -36,7 +37,8 @@ requirements:
     - tornado >=5.0
     - traitlets >=4.2.1
     - prometheus_client
-    - pywin32 >=1.0  # [win]
+    # presumably this will always be provided by jupyter_core, saving much CI
+    # - pywin32 >=1.0  # [win]
 
 test:
   commands:
@@ -52,6 +54,8 @@ about:
   summary: Jupyter Server
   description: The Jupyter Server provides the backend for Jupyter web applications such as the Jupyter notebook and JupyterLab.
   dev_url: https://github.com/jupyter/jupyter_server
+  doc_url: https://jupyter-server.readthedocs.io
+  doc_source_url: https://github.com/jupyter-server/jupyter_server/tree/{{ version }}/docs/source
 
 extra:
   recipe-maintainers:
