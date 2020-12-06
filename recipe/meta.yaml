@@ -41,7 +41,10 @@ requirements:
     # - pywin32 >=1.0  # [win]
 
 test:
+  requires:
+    - pip
   commands:
+    - pip check
     - jupyter server -h
   imports:
     - jupyter_server
