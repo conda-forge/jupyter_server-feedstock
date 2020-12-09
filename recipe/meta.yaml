@@ -1,5 +1,5 @@
 {% set name = "jupyter_server" %}
-{% set version = "1.0.8" %}
+{% set version = "1.0.9" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 58913ab2dac9dd85d5a00d71a4735f745b1fc823217a60eaad1881d0837380b6
+  sha256: 117ff1f5208d38a66a8df8b3ff745db855b3f6dc9dab4262bbd9dd10d078ef40
 
 build:
   noarch: python
@@ -34,7 +34,7 @@ requirements:
     - pyzmq >=17
     - send2trash
     - terminado >=0.8.3
-    - tornado >=5.0
+    - tornado >=6.1
     - traitlets >=4.2.1
     - prometheus_client
     # presumably this will always be provided by jupyter_core, saving much CI
