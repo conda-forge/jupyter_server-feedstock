@@ -1,6 +1,6 @@
 {% set name = "jupyter_server" %}
-{% set version = "1.0.10" %}
-{% set sha256 = "0c7c74ca31113523feee9c39b02494381175ea6079a39b0422aaaa9463c5796d" %}
+{% set version = "1.1.0" %}
+{% set sha256 = "0cb19a9f310583acef29f090720bd87e25212003246962c97ed77dc8a5c6448f" %}
 
 package:
   name: {{ name|lower }}
@@ -37,6 +37,7 @@ requirements:
     - traitlets >=4.2.1
     - prometheus_client
     - pywin32 >=1.0  # [win]
+    - anyio >=2.0.2
 
 test:
   commands:
