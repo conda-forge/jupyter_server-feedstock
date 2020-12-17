@@ -37,7 +37,8 @@ requirements:
     - traitlets >=4.2.1
     - prometheus_client
     - pywin32 >=1.0  # [win]
-
+    - anyio >=2.0.2
+ 
 test:
   commands:
     - jupyter server -h
