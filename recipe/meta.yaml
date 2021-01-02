@@ -16,7 +16,6 @@ build:
   entry_points:
     - jupyter-server = jupyter_server.serverapp:main
     - jupyter-bundlerextension = jupyter_server.bundlerextensions:main
-  skip: true  # [py36]
 
 requirements:
   host:
@@ -40,13 +39,16 @@ requirements:
     - anyio >=2.0.2
 
 test:
+  requires:
+    - pip
   commands:
+    - pip check
     - jupyter server -h
   imports:
     - jupyter_server
 
 about:
-  home: http://jupyter.org
+  home: https://jupyter.org
   license: BSD-3-Clause
   license_family: BSD
   license_file: COPYING.md
@@ -61,3 +63,4 @@ extra:
     - blink1073
     - minrk
     - jasongrout
+    - bollwyvl
