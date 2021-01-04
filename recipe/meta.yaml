@@ -13,8 +13,6 @@ source:
 build:
   number: 0
   script:
-    # TODO: re-PR this again upstream
-    - {{ PYTHON }} -c "__import__('shutil').rmtree('tests')"
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
     - jupyter-server = jupyter_server.serverapp:main
