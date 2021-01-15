@@ -249,4 +249,3 @@ Feedstock Maintainers
 * [@maartenbreddels](https://github.com/maartenbreddels/)
 * [@minrk](https://github.com/minrk/)
 * [@Zsailer](https://github.com/Zsailer/)
-
