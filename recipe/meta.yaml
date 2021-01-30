@@ -1,6 +1,6 @@
 {% set name = "jupyter_server" %}
-{% set version = "1.2.2" %}
-{% set sha256 = "26a98cd5c45b8ebd1e10215586c350a8fa3ca2971e757ee6bf517a180f9933ae" %}
+{% set version = "1.2.3" %}
+{% set sha256 = "d8a723668725be65cc81c2bfe8a805d3e53d26dbe29953cb0fe4d8ae69d71b00" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script:
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
