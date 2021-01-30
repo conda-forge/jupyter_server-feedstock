@@ -18,7 +18,7 @@ Current build status
 
 
 <table>
-
+    
   <tr>
     <td>Azure</td>
     <td>
@@ -243,9 +243,10 @@ Feedstock Maintainers
 =====================
 
 * [@SylvainCorlay](https://github.com/SylvainCorlay/)
+* [@Zsailer](https://github.com/Zsailer/)
 * [@blink1073](https://github.com/blink1073/)
 * [@bollwyvl](https://github.com/bollwyvl/)
 * [@jasongrout](https://github.com/jasongrout/)
 * [@maartenbreddels](https://github.com/maartenbreddels/)
 * [@minrk](https://github.com/minrk/)
-* [@Zsailer](https://github.com/Zsailer/)
+
