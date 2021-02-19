@@ -1,6 +1,6 @@
 {% set name = "jupyter_server" %}
-{% set version = "1.3.0" %}
-{% set sha256 = "b9d32d102df25f66ec3c1fe508c62cd0c856123452d973741da84fee4be01912" %}
+{% set version = "1.4.0" %}
+{% set sha256 = "023431125ffeae8330eb0daab78658dffc51b3886ec5621ee006dcb0f267cc49" %}
 
 package:
   name: {{ name|lower }}
@@ -40,7 +40,7 @@ requirements:
     - prometheus_client
     - pywin32 >=1.0  # [win]
     - anyio >=2.0.2
-    # TODO: remove after an anyio 2.0.3 comes out so pins work
+    # TODO: remove after anyio 2.1.0 available on all supported platforms
     - dataclasses  # [py<37]
 
 test:
