@@ -11,6 +11,8 @@ Summary: Jupyter Server
 
 Development: https://github.com/jupyter/jupyter_server
 
+Documentation: https://jupyter-server.readthedocs.io
+
 The Jupyter Server provides the backend for Jupyter web applications such as the Jupyter notebook and JupyterLab.
 
 Current build status
