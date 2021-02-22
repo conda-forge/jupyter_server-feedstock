@@ -1,14 +1,13 @@
 {% set name = "jupyter_server" %}
-{% set version = "1.4.0" %}
-{% set sha256 = "023431125ffeae8330eb0daab78658dffc51b3886ec5621ee006dcb0f267cc49" %}
+{% set version = "1.4.1" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: b0126f237f679533eec46244cfc66d61e3a1f8ec0fad2d47352fa19d3e754e47
 
 build:
   number: 0
@@ -60,6 +59,7 @@ about:
   summary: Jupyter Server
   description: The Jupyter Server provides the backend for Jupyter web applications such as the Jupyter notebook and JupyterLab.
   dev_url: https://github.com/jupyter/jupyter_server
+  doc_url: https://jupyter-server.readthedocs.io
 
 extra:
   recipe-maintainers:
