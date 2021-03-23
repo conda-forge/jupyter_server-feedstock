@@ -1,5 +1,5 @@
 {% set name = "jupyter_server" %}
-{% set version = "1.4.1" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b0126f237f679533eec46244cfc66d61e3a1f8ec0fad2d47352fa19d3e754e47
+  sha256: ff127713a57ab7aa7b23f7df9b082951cc4b05d8d64cc0949d01ea02ac24c70c
 
 build:
   number: 0
@@ -32,6 +32,7 @@ requirements:
     - nbconvert
     - nbformat
     - pyzmq >=17
+    - argon2-cffi
     - send2trash
     - terminado >=0.8.3
     - tornado >=6.1
