@@ -32,6 +32,7 @@ requirements:
     - nbconvert
     - nbformat
     - pyzmq >=17
+    - argon2-cffi
     - send2trash
     - terminado >=0.8.3
     - tornado >=6.1
