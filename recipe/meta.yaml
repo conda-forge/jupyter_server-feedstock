@@ -1,5 +1,5 @@
 {% set name = "jupyter_server" %}
-{% set version = "1.6.4" %}
+{% set version = "1.7.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 21c20986047563aba2997cb10ba9441a162ec1d65b5aece9d5fa625602bb2b40
+  sha256: d9cfc1d21ff9951f185d9cbf9b742b911f57b98887ed79e210acd6f720505576
 
 build:
   number: 0
@@ -23,13 +23,12 @@ requirements:
   host:
     - python
     - pip
-    - jupyter-packaging >=0.9,<1.0
+    - jupyter-packaging >=0.9,<2
   run:
-    - jupyter-packaging >=0.9,<1.0
     - python
     - ipython_genutils
     - jinja2
-    - jupyter_core >=4.4.0
+    - jupyter_core >=4.6.0
     - jupyter_client >=6.1.1
     - nbconvert
     - nbformat
@@ -41,9 +40,9 @@ requirements:
     - traitlets >=4.2.1
     - prometheus_client
     - pywin32 >=1.0  # [win]
-    - anyio >=2.0.2,<3
-    # TODO: remove after anyio 2.1.0 available on all supported platforms
-    - dataclasses  # [py<37]
+    - anyio >=2.0.2,<3  # [py<37]
+    - anyio >=3.0.1,<4  # [py>36]
+    - websocket-client    
 
 test:
   requires:
