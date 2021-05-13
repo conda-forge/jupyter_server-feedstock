@@ -40,8 +40,8 @@ requirements:
     - traitlets >=4.2.1
     - prometheus_client
     - pywin32 >=1.0  # [win]
-    - anyio>=2.0.2,<3  # [py<37]
-    - anyio>=3.0.1,<4  # [py>36]
+    - anyio >=2.0.2,<3  # [py<37]
+    - anyio >=3.0.1,<4  # [py>36]
     - websocket-client    
 
 test:
