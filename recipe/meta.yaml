@@ -10,7 +10,7 @@ source:
   sha256: d9cfc1d21ff9951f185d9cbf9b742b911f57b98887ed79e210acd6f720505576
 
 build:
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
@@ -39,10 +39,9 @@ requirements:
     - tornado >=6.1
     - traitlets >=4.2.1
     - prometheus_client
-    - pywin32 >=1.0  # [win]
     - anyio >=2.0.2,<3  # [py<37]
     - anyio >=3.0.1,<4  # [py>36]
-    - websocket-client    
+    - websocket-client
 
 test:
   requires:
