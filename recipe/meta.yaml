@@ -1,5 +1,5 @@
 {% set name = "jupyter_server" %}
-{% set version = "1.7.0" %}
+{% set version = "1.8.0" %}
 
 package:
   name: {{ name }}
@@ -7,25 +7,23 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d9cfc1d21ff9951f185d9cbf9b742b911f57b98887ed79e210acd6f720505576
+  sha256: 8f0c75e0a577536125ad62a442ebb7cf02746f1a69d907e8a273c6225d281237
 
 build:
-  number: 1
+  noarch: python
+  number: 0
   script:
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
     - jupyter-server = jupyter_server.serverapp:main
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.6
     - pip
     - jupyter-packaging >=0.9,<2
   run:
-    - python
+    - python >=3.6
     - ipython_genutils
     - jinja2
     - jupyter_core >=4.6.0
@@ -39,8 +37,7 @@ requirements:
     - tornado >=6.1
     - traitlets >=4.2.1
     - prometheus_client
-    - anyio >=2.0.2,<3  # [py<37]
-    - anyio >=3.0.1,<4  # [py>36]
+    - anyio >=3.1.0,<4
     - websocket-client
 
 test:
