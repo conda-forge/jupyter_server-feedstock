@@ -39,6 +39,7 @@ requirements:
     - prometheus_client
     - anyio >=3.1.0,<4
     - websocket-client
+    - requests-unixsocket
 
 test:
   requires:
