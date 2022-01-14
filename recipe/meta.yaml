@@ -35,10 +35,11 @@ requirements:
     - send2trash
     - terminado >=0.8.3
     - tornado >=6.1
-    - traitlets >=4.2.1
+    - traitlets >=5
     - prometheus_client
     - anyio >=3.1.0,<4
     - websocket-client
+    - packaging
 
 test:
   requires:
