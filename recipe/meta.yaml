@@ -50,8 +50,8 @@ test:
   imports:
     - jupyter_server
   downstreams:
-    - jupyterlab_server
-    - jupyterlab
+    - jupyterlab_server >=2.10
+    - jupyterlab >=3.2
 
 about:
   home: https://jupyter.org
