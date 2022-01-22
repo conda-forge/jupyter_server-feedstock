@@ -19,27 +19,27 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - jupyter-packaging >=0.9,<1
     - pip
-    - jupyter-packaging >=0.9,<2
-  run:
     - python >=3.6
+  run:
+    - anyio >=3.1.0,<4
+    - argon2-cffi
     - ipython_genutils
     - jinja2
-    - jupyter_core >=4.6.0
     - jupyter_client >=6.1.1
+    - jupyter_core >=4.6.0
     - nbconvert
     - nbformat
+    - packaging
+    - prometheus_client
+    - python >=3.6
     - pyzmq >=17
-    - argon2-cffi
     - send2trash
     - terminado >=0.8.3
-    - tornado >=6.1
+    - tornado >=6.1.0
     - traitlets >=5
-    - prometheus_client
-    - anyio >=3.1.0,<4
     - websocket-client
-    - packaging
 
 test:
   requires:
@@ -49,6 +49,9 @@ test:
     - jupyter server -h
   imports:
     - jupyter_server
+  downstreams:
+    - jupyterlab_server
+    - jupyterlab
 
 about:
   home: https://jupyter.org
