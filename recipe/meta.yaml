@@ -21,7 +21,7 @@ requirements:
   host:
     - jupyter-packaging >=0.9,<1
     - pip
-    - python >=3.6
+    - python >=3.7
   run:
     - anyio >=3.1.0,<4
     - argon2-cffi
@@ -33,7 +33,7 @@ requirements:
     - nbformat
     - packaging
     - prometheus_client
-    - python >=3.6
+    - python >=3.7
     - pyzmq >=17
     - send2trash
     - terminado >=0.8.3
