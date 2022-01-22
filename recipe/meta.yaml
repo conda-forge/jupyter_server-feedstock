@@ -50,8 +50,9 @@ test:
   imports:
     - jupyter_server
   downstreams:
-    - jupyterlab_server >=2.10
     - jupyterlab >=3.2
+    # TODO: uncomment for test suite with deps, etc. when test deps pass pip check
+    # - jupyterlab_server >=2.10
 
 about:
   home: https://jupyter.org
