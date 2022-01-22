@@ -1,5 +1,5 @@
 {% set name = "jupyter_server" %}
-{% set version = "1.13.3" %}
+{% set version = "1.13.4" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4d622161f4d378ff28548b49cc180024ce102d25ba5805821fcc17ab1bc5c754
+  sha256: 5fb5a219385338b1d13a013a68f54688b6a69ecff4e757fd230e27ecacdbf212
 
 build:
   noarch: python
@@ -19,27 +19,27 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - jupyter-packaging >=0.9,<1
     - pip
-    - jupyter-packaging >=0.9,<2
+    - python >=3.7
   run:
-    - python >=3.6
+    - anyio >=3.1.0,<4
+    - argon2-cffi
     - ipython_genutils
     - jinja2
-    - jupyter_core >=4.6.0
     - jupyter_client >=6.1.1
+    - jupyter_core >=4.6.0
     - nbconvert
     - nbformat
+    - packaging
+    - prometheus_client
+    - python >=3.7
     - pyzmq >=17
-    - argon2-cffi
     - send2trash
     - terminado >=0.8.3
-    - tornado >=6.1
+    - tornado >=6.1.0
     - traitlets >=5
-    - prometheus_client
-    - anyio >=3.1.0,<4
     - websocket-client
-    - packaging
 
 test:
   requires:
@@ -49,6 +49,10 @@ test:
     - jupyter server -h
   imports:
     - jupyter_server
+  downstreams:
+    - jupyterlab >=3.2
+    # TODO: uncomment for test suite with deps, etc. when test deps pass pip check
+    # - jupyterlab_server >=2.10
 
 about:
   home: https://jupyter.org
