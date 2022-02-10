@@ -1,17 +1,16 @@
-{% set name = "jupyter_server" %}
 {% set version = "1.13.5" %}
 
 package:
-  name: {{ name }}
+  name: jupyter_server
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/j/jupyter_server/jupyter_server-{{ version }}.tar.gz
   sha256: 9e3e9717eea3bffab8cfb2ff330011be6c8bbd9cdae5b71cef169fcece2f19d3
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
@@ -40,6 +39,8 @@ requirements:
     - tornado >=6.1.0
     - traitlets >=5
     - websocket-client
+  run_constrained:
+    - pywinpty <2
 
 test:
   requires:
