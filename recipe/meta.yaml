@@ -1,4 +1,4 @@
-{% set version = "1.15.5" %}
+{% set version = "1.15.6" %}
 
 package:
   name: jupyter_server
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter_server/jupyter_server-{{ version }}.tar.gz
-  sha256: 01b3f05cda404612e7366f491cfed39b49bdbf07e16d9d073f404c60dd0d199d
+  sha256: 56bd6f580d1f46b62294990e8e78651025729f5d3fc798f10f2c03f0cdcbf28d
 
 build:
   noarch: python
@@ -57,7 +57,7 @@ test:
   commands:
     - pip check
     - jupyter server -h
-    - cd tests && pytest -vv --cov jupyter_server --cov-report term-missing:skip-covered --no-cov-on-fail --cov-fail-under 70 
+    - cd tests && pytest -vv --cov jupyter_server --cov-report term-missing:skip-covered --no-cov-on-fail --cov-fail-under 70
   imports:
     - jupyter_server
   downstreams:
