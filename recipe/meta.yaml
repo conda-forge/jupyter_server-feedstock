@@ -45,9 +45,19 @@ requirements:
 test:
   requires:
     - pip
+    - coverage
+    - pytest >=6.0
+    - pytest-cov
+    - pytest-mock
+    - pytest-timeout
+    - requests
+    - pytest-tornasync
+    - pytest-console-scripts
+    - ipykernel
   commands:
     - pip check
     - jupyter server -h
+    - cd tests && pytest -vv --cov jupyter_server --cov-report term-missing:skip-covered --no-cov-on-fail --cov-fail-under 70 
   imports:
     - jupyter_server
   downstreams:
