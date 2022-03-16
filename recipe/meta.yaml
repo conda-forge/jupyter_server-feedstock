@@ -1,4 +1,4 @@
-{% set version = "1.15.4" %}
+{% set version = "1.15.5" %}
 
 package:
   name: jupyter_server
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter_server/jupyter_server-{{ version }}.tar.gz
-  sha256: 1983a2a71d8709a77da6804ece67ded776c201ba11126de7002d088fb3418c85
+  sha256: 01b3f05cda404612e7366f491cfed39b49bdbf07e16d9d073f404c60dd0d199d
 
 build:
   noarch: python
