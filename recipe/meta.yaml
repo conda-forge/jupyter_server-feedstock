@@ -29,7 +29,7 @@ requirements:
     - jupyter_client >=6.1.1
     - jupyter_core >=4.6.0
     - nbconvert
-    - nbformat
+    - nbformat >= 5.2.0
     - packaging
     - prometheus_client
     - python >=3.7
