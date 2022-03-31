@@ -10,7 +10,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
@@ -18,40 +18,42 @@ build:
 
 requirements:
   host:
-    - jupyter-packaging >=0.9,<1
+    - jupyter-packaging >=0.9,<1.0
     - pip
     - python >=3.7
   run:
-    - anyio >=3.1
+    - anyio >=3.1.0
     - argon2-cffi
-    - ipython_genutils
     - jinja2
     - jupyter_client >=6.1.12
-    - jupyter_core >=4.7
-    - nbconvert >=6.4.4
-    - nbformat >=5.2
+    - jupyter_core >=4.7.0
+    - nbconvert-core >=6.4.4  # avoid hard dependency on pandoc
+    - nbformat >=5.2.0
     - packaging
     - prometheus_client
     - python >=3.7
     - pyzmq >=17
     - send2trash
     - terminado >=0.8.3
-    - tornado >=6.1
-    - traitlets >=5.1
+    - tornado >=6.1.0
+    - traitlets >=5.1.0
     - websocket-client
+    # - pywinpty  # [win]  # rely on terminado to get this to keep noarch
+
 
 test:
   requires:
     - pip
+    # test deps
     - coverage
+    - ipykernel
     - pytest >=6.0
+    - pytest-console-scripts
     - pytest-cov
     - pytest-mock
     - pytest-timeout
-    - requests
     - pytest-tornasync
-    - pytest-console-scripts
-    - ipykernel
+    - requests
   commands:
     - pip check
     - jupyter server -h
