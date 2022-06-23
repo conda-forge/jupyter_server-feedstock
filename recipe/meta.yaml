@@ -62,7 +62,8 @@ test:
     - jupyter_server
   downstreams:
     - jupyterlab >=3.2
-    - jupyterlab_server >=2.10
+    # TODO: restore when openapi-schema-validator/openapi-spec-validator versions are better synced
+    # - jupyterlab_server >=2.10
 
 about:
   home: https://jupyter.org
