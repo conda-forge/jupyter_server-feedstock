@@ -10,7 +10,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
@@ -62,8 +62,7 @@ test:
     - jupyter_server
   downstreams:
     - jupyterlab >=3.2
-    # TODO: restore when openapi-schema-validator/openapi-spec-validator versions are better synced
-    # - jupyterlab_server >=2.10
+    - jupyterlab_server >=2.14.0=*_1
 
 about:
   home: https://jupyter.org
