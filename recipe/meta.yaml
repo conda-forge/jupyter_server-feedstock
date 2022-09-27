@@ -53,7 +53,7 @@ test:
     - pytest-mock
     - pytest-timeout
     - pytest-tornasync
-    - openapi_core <0.15
+    - openapi-core <0.15
     - requests
   commands:
     - pip check
