@@ -63,7 +63,7 @@ test:
     - pip check
     - jupyter server -h
     # delete tests fail if /tmp and /home/.../trash are on different devices
-    - pytest -vv --cov=jupyter_server -k "not delete" --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=70
+    - pytest -vv --cov=jupyter_server -k "not (delete or merge_config)" --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=70
   imports:
     - jupyter_server
   downstreams:
