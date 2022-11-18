@@ -62,7 +62,8 @@ test:
   commands:
     - pip check
     - jupyter server -h
-    - cd tests && pytest -vv --cov jupyter_server --cov-report term-missing:skip-covered --no-cov-on-fail --cov-fail-under 70
+    # delete tests fail if /tmp and /home/.../trash are on different devices
+    - pytest -vv --cov=jupyter_server -k "not delete" --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=70
   imports:
     - jupyter_server
   downstreams:
