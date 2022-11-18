@@ -49,6 +49,8 @@ requirements:
 
 
 test:
+  source_files:
+    - tests
   requires:
     - pip
     # test deps
