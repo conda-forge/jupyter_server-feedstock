@@ -1,4 +1,4 @@
-{% set version = "1.23.2" %}
+{% set version = "2.0.0rc4" %}
 
 package:
   name: jupyter_server
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter_server/jupyter_server-{{ version }}.tar.gz
-  sha256: 69cb954ef02c0ba1837787e34e4a1240c93c8eb590662fae1840778861957660
+  sha256: 5c93c04b24340ab24d8190c5de52e5eace3eea91908d85bb05e96a0a93dde54a
 
 build:
   noarch: python
@@ -18,24 +18,26 @@ build:
 
 requirements:
   host:
-    - jupyter-packaging >=0.9,<1.0
+    - hatchling >=1.11
     - pip
-    - python >=3.7
+    - python >=3.8
   run:
-    - anyio >=3.1.0
+    - anyio >=3.1.0,<4
     - argon2-cffi
     - jinja2
-    - jupyter_client >=6.1.12
-    - jupyter_core >=4.7.0
+    - jupyter_client >=7.4.4
+    - jupyter_core >=4.9.2
+    - jupyter_events >=0.4.0
+    - jupyter_server_terminals
     - nbconvert-core >=6.4.4  # avoid hard dependency on pandoc
     - nbformat >=5.2.0
     - packaging
     - prometheus_client
-    - python >=3.7
-    - pyzmq >=17
+    - python >=3.8
+    - pyzmq >=24
     - send2trash
     - terminado >=0.8.3
-    - tornado >=6.1.0
+    - tornado >=6.2.0
     - traitlets >=5.1.0
     - websocket-client
     # - pywinpty  # [win]  # rely on terminado to get this to keep noarch
@@ -47,10 +49,9 @@ test:
     # test deps
     - coverage
     - ipykernel
-    - pytest >=6.0
+    - pytest >=7.0
     - pytest-console-scripts
     - pytest-cov
-    - pytest-mock
     - pytest-timeout
     - pytest-tornasync
     - requests
@@ -65,14 +66,12 @@ test:
     - jupyterlab_server >=2.14.0
 
 about:
-  home: https://jupyter.org
+  home: https://jupyter-server.readthedocs.io
   license: BSD-3-Clause
   license_family: BSD
   license_file: COPYING.md
-  summary: Jupyter Server
-  description: The Jupyter Server provides the backend for Jupyter web applications such as the Jupyter notebook and JupyterLab.
+  summary: The backend—i.e. core services, APIs, and REST endpoints to Jupyter web applications.
   dev_url: https://github.com/jupyter/jupyter_server
-  doc_url: https://jupyter-server.readthedocs.io
 
 extra:
   recipe-maintainers:
