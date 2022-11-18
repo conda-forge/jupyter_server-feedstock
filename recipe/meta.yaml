@@ -15,8 +15,12 @@ build:
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
     - jupyter-server = jupyter_server.serverapp:main
+  ignore_run_exports:
+    - nodejs
 
 requirements:
+  build:
+    - nodejs >=16,!=17.*,<19
   host:
     - hatch-jupyter-builder >=0.8.1
     - hatchling >=1.11
