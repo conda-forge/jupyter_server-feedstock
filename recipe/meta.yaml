@@ -68,7 +68,8 @@ test:
     - jupyter_server
   downstreams:
     - jupyterlab >=3.2
-    - jupyterlab_server >=2.14.0
+    # doesn't bring along pytest-jupyter
+    # - jupyterlab_server >=2.14.0
 
 about:
   home: https://jupyter-server.readthedocs.io
