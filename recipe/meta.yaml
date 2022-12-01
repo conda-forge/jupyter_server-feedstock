@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter_server/jupyter_server-{{ version }}.tar.gz
-  sha256: 0a73913cd966b54a48e9076cc462fad3c45d945c0c9eeb79bd0bcb914b739ee1
+  sha256: acf54cecf758fa7012423b745c2433f9887bb7c70f420805875526cfdb085ce1
 
 build:
   noarch: python
