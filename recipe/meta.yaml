@@ -57,7 +57,7 @@ test:
     - pytest-console-scripts
     - pytest-cov
     - pytest-timeout
-    - pytest-jupyter >=0.4
+    - pytest-jupyter-server >=0.4
     - requests
   commands:
     - pip check
