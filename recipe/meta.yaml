@@ -66,10 +66,10 @@ test:
     - pytest -vv --cov=jupyter_server -k "not (delete or merge_config)" --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=70
   imports:
     - jupyter_server
-  downstreams:
-    - jupyterlab >=3.2
-    # doesn't bring along pytest-jupyter
-    # - jupyterlab_server >=2.14.0
+  # TODO: restore these, see https://github.com/conda-forge/jupyter_server-feedstock/issues/111
+  # downstreams:
+  #  - jupyterlab >=3.2
+  #  - jupyterlab_server >=2.14.0
 
 about:
   home: https://jupyter-server.readthedocs.io
