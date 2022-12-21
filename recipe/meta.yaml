@@ -1,4 +1,4 @@
-{% set version = "2.0.2" %}
+{% set version = "2.0.3" %}
 
 package:
   name: jupyter_server
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter_server/jupyter_server-{{ version }}.tar.gz
-  sha256: 9de034fd229ab2c78815615deab45cb80897f35e10feabfb45b10628909affa8
+  sha256: 5c33a66a33f4bd85924d1c5b0e5bdbe1595c70791c1614cbedbaabab75dd27ba
 
 build:
   noarch: python
@@ -66,10 +66,9 @@ test:
     - pytest -vv --cov=jupyter_server -k "not (delete or merge_config)" --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=70
   imports:
     - jupyter_server
-  # TODO: restore these, see https://github.com/conda-forge/jupyter_server-feedstock/issues/111
-  # downstreams:
-  #  - jupyterlab >=3.2
-  #  - jupyterlab_server >=2.14.0
+  downstreams:
+    - jupyterlab >=3.2
+    - jupyterlab_server >=2.14.0
 
 about:
   home: https://jupyter-server.readthedocs.io
