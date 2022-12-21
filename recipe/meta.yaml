@@ -68,7 +68,8 @@ test:
     - jupyter_server
   downstreams:
     - jupyterlab >=3.2
-    - jupyterlab_server >=2.14.0
+    # TODO: fix "ImportError: cannot import name 'default_handlers' from 'openapi_spec_validator'"
+    # - jupyterlab_server >=2.14.0
 
 about:
   home: https://jupyter-server.readthedocs.io
