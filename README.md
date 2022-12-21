@@ -1,15 +1,19 @@
 About jupyter_server
 ====================
 
-Home: https://jupyter-server.readthedocs.io
+Home: https://jupyter.org
 
 Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter_server-feedstock/blob/main/LICENSE.txt)
 
-Summary: The backend—i.e. core services, APIs, and REST endpoints to Jupyter web applications.
+Summary: Jupyter Server
 
 Development: https://github.com/jupyter/jupyter_server
+
+Documentation: https://jupyter-server.readthedocs.io
+
+The Jupyter Server provides the backend for Jupyter web applications such as the Jupyter notebook and JupyterLab.
 
 Current build status
 ====================
