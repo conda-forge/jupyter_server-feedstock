@@ -1,4 +1,4 @@
-{% set version = "1.23.4" %}
+{% set version = "1.23.5" %}
 
 package:
   name: jupyter_server
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter_server/jupyter_server-{{ version }}.tar.gz
-  sha256: 4ee4f311bd944bcf8060a8b746059571c40f6b8ada1d1e6e51239d26ab23b15c
+  sha256: a2caa759e2a29ece1aad013c58215fe951f38317b97de462b921834955fe3fca
 
 build:
   noarch: python
@@ -26,7 +26,7 @@ requirements:
     - argon2-cffi
     - jinja2
     - jupyter_client >=6.1.12
-    - jupyter_core >=4.7.0
+    - jupyter_core >=4.12,!=5.0.*
     - nbconvert-core >=6.4.4  # avoid hard dependency on pandoc
     - nbformat >=5.2.0
     - packaging
