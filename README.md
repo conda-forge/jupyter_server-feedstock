@@ -157,4 +157,3 @@ Feedstock Maintainers
 * [@maartenbreddels](https://github.com/maartenbreddels/)
 * [@minrk](https://github.com/minrk/)
 
-<!-- comment to trigger CI -->
