@@ -1,4 +1,4 @@
-{% set version = "2.2.1" %}
+{% set version = "2.3.0" %}
 
 package:
   name: jupyter_server
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter_server/jupyter_server-{{ version }}.tar.gz
-  sha256: 5afb8a0cdfee37d02d69bdf470ae9cbb1dee5d4788f9bc6cc8e54bd8c83fb096
+  sha256: 29d6657bfb160b0e39b9030d67f33f918a188f2eba28065314a933b327fef872
 
 build:
   noarch: python
@@ -74,7 +74,7 @@ about:
   home: https://jupyter-server.readthedocs.io
   license: BSD-3-Clause
   license_family: BSD
-  license_file: COPYING.md
+  license_file: LICENSE
   summary: The backend—i.e. core services, APIs, and REST endpoints to Jupyter web applications.
   dev_url: https://github.com/jupyter/jupyter_server
 
