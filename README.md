@@ -1,11 +1,11 @@
-About jupyter_server
-====================
+About jupyter_server-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter_server-feedstock/blob/main/LICENSE.txt)
 
 Home: https://jupyter-server.readthedocs.io
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter_server-feedstock/blob/main/LICENSE.txt)
 
 Summary: The backend—i.e. core services, APIs, and REST endpoints to Jupyter web applications.
 
