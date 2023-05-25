@@ -37,6 +37,7 @@ requirements:
     - jupyter_server_terminals
     - nbconvert-core >=6.4.4  # avoid hard dependency on pandoc
     - nbformat >=5.3.0
+    - overrides
     - packaging
     - prometheus_client
     - python >=3.8
