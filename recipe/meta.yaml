@@ -57,6 +57,7 @@ test:
     - pip
     # test deps
     - coverage
+    - flaky
     - ipykernel
     - pytest >=7.0
     - pytest-console-scripts
