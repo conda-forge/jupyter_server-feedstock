@@ -8,7 +8,7 @@ COV_THRESHOLD = 70
 PYPY = "__pypy__" in sys.builtin_module_names
 
 # base opinions
-PYTEST_ARGS = ["pytest", "-vv", "--tb=-long", "--color=yes"]
+PYTEST_ARGS = ["pytest", "-vv", "--tb=long", "--color=yes"]
 
 # known to fail in conda-forge CI
 SKIPS = [
