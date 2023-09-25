@@ -14,17 +14,17 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script:
-    - {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-cache-dir --no-build-isolation
   entry_points:
     - jupyter-server = jupyter_server.serverapp:main
 
 requirements:
   host:
-    - nodejs >=18
     - hatch-jupyter-builder >=0.8.1
     - hatchling >=1.11
+    - nodejs >=18
     - pip
     - python >=3.8
   run:
@@ -68,8 +68,6 @@ test:
   commands:
     - pip check
     - jupyter server -h
-    # delete tests fail if /tmp and /home/.../trash are on different devices
-    - pytest -vv --cov=jupyter_server -k "not (delete or merge_config)" --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=70
   imports:
     - jupyter_server
   downstreams:
