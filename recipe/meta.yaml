@@ -1,4 +1,4 @@
-{% set version = "2.10.0" %}
+{% set version = "2.10.1" %}
 
 package:
   name: jupyter_server
@@ -10,7 +10,7 @@ source:
     - https://pypi.io/packages/source/j/jupyter-server/jupyter_server-{{ version }}.tar.gz
     # fall back to the GitHub release assset (_not_ a snapshot)
     - https://github.com/jupyter-server/jupyter_server/releases/download/v{{ version }}/jupyter_server-{{ version }}.tar.gz
-  sha256: 47b8f5e63440125cb1bb8957bf12b18453ee5ed9efe42d2f7b2ca66a7019a278
+  sha256: e6da2657a954a7879eed28cc08e0817b01ffd81d7eab8634660397b55f926472
 
 build:
   noarch: python
@@ -33,7 +33,7 @@ requirements:
     - jinja2
     - jupyter_client >=7.4.4
     - jupyter_core >=4.12,!=5.0.*
-    - jupyter_events >=0.6.0
+    - jupyter_events >=0.9.0
     - jupyter_server_terminals
     - nbconvert-core >=6.4.4  # avoid hard dependency on pandoc
     - nbformat >=5.3.0
