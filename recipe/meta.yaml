@@ -63,11 +63,12 @@ test:
     - pytest-console-scripts
     - pytest-cov
     - pytest-timeout
-    - pytest-jupyter-server >=0.6.0=*_1
+    - pytest-jupyter-server >=0.7
     - requests
   commands:
     - pip check
     - jupyter server -h
+    - jupyter-server -h
   imports:
     - jupyter_server
   downstreams:
