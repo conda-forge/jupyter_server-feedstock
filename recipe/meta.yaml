@@ -59,7 +59,7 @@ test:
     - coverage
     - flaky
     - ipykernel
-    - pytest >=7.0
+    - pytest >=7.0,<8
     - pytest-console-scripts
     - pytest-cov
     - pytest-timeout
