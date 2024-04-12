@@ -1,6 +1,8 @@
 build_platform: {osx_arm64: osx_64}
 conda_forge_output_validation: true
 provider: {linux_aarch64: default, linux_ppc64le: azure, win: azure}
+# `mamba` seems to fail with `test/downstreams`
+conda_build_tool: conda-build
 github:
   branch_name: main
   tooling_branch_name: main
@@ -8,7 +10,4 @@ conda_build:
   pkg_format: '2'
 bot:
   inspection: hint-all
-
-# `mamba` seems to fail with `test/downstreams`
-build_with_mambabuild: false
 test: native_and_emulated
