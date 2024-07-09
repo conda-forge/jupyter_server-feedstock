@@ -14,7 +14,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-cache-dir --no-build-isolation
   entry_points:
@@ -29,25 +29,25 @@ requirements:
     - python >=3.8
   run:
     - anyio >=3.1.0
-    - argon2-cffi
-    - jinja2
+    - argon2-cffi >=21.1
+    - jinja2 >=3.0.3
     - jupyter_client >=7.4.4
     - jupyter_core >=4.12,!=5.0.*
     - jupyter_events >=0.9.0
-    - jupyter_server_terminals
+    - jupyter_server_terminals >=0.4.4
     - nbconvert-core >=6.4.4  # avoid hard dependency on pandoc
     - nbformat >=5.3.0
-    - overrides
-    - packaging
-    - prometheus_client
+    - overrides >=5.0
+    - packaging >=22.0
+    - prometheus_client >=0.9
     - python >=3.8
     - pyzmq >=24
     - send2trash >=1.8.2
     - terminado >=0.8.3
     - tornado >=6.2.0
     - traitlets >=5.6.0
-    - websocket-client
-    # - pywinpty  # [win]  # rely on terminado to get this to keep noarch
+    - websocket-client >=1.7
+    # - pywinpty >=2.0.1  # [win]  # rely on terminado to get this to keep noarch
 
 
 test:
