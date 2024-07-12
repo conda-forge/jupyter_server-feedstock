@@ -1,4 +1,4 @@
-{% set version = "2.14.1" %}
+{% set version = "2.14.2" %}
 
 package:
   name: jupyter_server
@@ -10,11 +10,11 @@ source:
     - https://pypi.io/packages/source/j/jupyter-server/jupyter_server-{{ version }}.tar.gz
     # fall back to the GitHub release assset (_not_ a snapshot)
     - https://github.com/jupyter-server/jupyter_server/releases/download/v{{ version }}/jupyter_server-{{ version }}.tar.gz
-  sha256: 12558d158ec7a0653bf96cc272bc7ad79e0127d503b982ed144399346694f726
+  sha256: 66095021aa9638ced276c248b1d81862e4c50f292d575920bbe960de1c56b12b
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script:
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-cache-dir --no-build-isolation
   entry_points:
