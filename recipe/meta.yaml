@@ -7,7 +7,7 @@ package:
 source:
   url:
     # prefer the canonical PyPI upload
-    - https://pypi.io/packages/source/j/jupyter-server/jupyter_server-{{ version }}.tar.gz
+    - https://pypi.org/packages/source/j/jupyter-server/jupyter_server-{{ version }}.tar.gz
     # fall back to the GitHub release assset (_not_ a snapshot)
     - https://github.com/jupyter-server/jupyter_server/releases/download/v{{ version }}/jupyter_server-{{ version }}.tar.gz
   sha256: 66095021aa9638ced276c248b1d81862e4c50f292d575920bbe960de1c56b12b
@@ -16,7 +16,7 @@ build:
   noarch: python
   number: 1
   script:
-    - {{ PYTHON }} -m pip install . -vv --no-deps --no-cache-dir --no-build-isolation
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   entry_points:
     - jupyter-server = jupyter_server.serverapp:main
 
@@ -64,8 +64,8 @@ test:
     - pytest-cov
     - pytest-timeout
     - pytest-jupyter-server >=0.7
-    - requests
     - python {{ python_min }}
+    - requests
   commands:
     - pip check
     - jupyter server -h
