@@ -14,7 +14,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-cache-dir --no-build-isolation
   entry_points:
@@ -26,7 +26,7 @@ requirements:
     - hatchling >=1.11
     - nodejs >=18
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - anyio >=3.1.0
     - argon2-cffi >=21.1
@@ -40,7 +40,7 @@ requirements:
     - overrides >=5.0
     - packaging >=22.0
     - prometheus_client >=0.9
-    - python >=3.8
+    - python >={{ python_min }}
     - pyzmq >=24
     - send2trash >=1.8.2
     - terminado >=0.8.3
@@ -65,6 +65,7 @@ test:
     - pytest-timeout
     - pytest-jupyter-server >=0.7
     - requests
+    - python {{ python_min }}
   commands:
     - pip check
     - jupyter server -h
