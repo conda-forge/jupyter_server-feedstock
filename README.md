@@ -29,7 +29,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-jupyter_server-green.svg)](https://anaconda.org/conda-forge/jupyter_server) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupyter_server.svg)](https://anaconda.org/conda-forge/jupyter_server) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupyter_server.svg)](https://anaconda.org/conda-forge/jupyter_server) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupyter_server.svg)](https://anaconda.org/conda-forge/jupyter_server) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-jupyter__server-green.svg)](https://anaconda.org/conda-forge/jupyter_server) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupyter_server.svg)](https://anaconda.org/conda-forge/jupyter_server) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupyter_server.svg)](https://anaconda.org/conda-forge/jupyter_server) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupyter_server.svg)](https://anaconda.org/conda-forge/jupyter_server) |
 
 Installing jupyter_server
 =========================
