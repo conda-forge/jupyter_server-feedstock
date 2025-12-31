@@ -78,6 +78,7 @@ tests:
         - pytest-jupyter-server >=0.7
         - python ${{ python_min }}.*
         - requests
+        - send2trash >=2
     script:
       - jupyter server -h
       - jupyter-server -h
