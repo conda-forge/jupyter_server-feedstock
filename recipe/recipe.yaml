@@ -83,9 +83,9 @@ tests:
       - jupyter server -h
       - jupyter-server -h
       - python run_test.py
-  # TODO: restore downstreams
-  # - downstream: jupyterlab >=3.2
   - downstream: jupyterlab_server >=2.20.0
+  - downstream: jupyterlab >=4.3
+  - downstream: notebook >=7.3
 
 about:
   license: BSD-3-Clause
