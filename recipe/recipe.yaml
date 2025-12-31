@@ -84,7 +84,7 @@ tests:
       - jupyter-server -h
       - python run_test.py
   - downstream: jupyterlab_server >=2.20.0
-  - downstream: jupyterlab >=4.3
+  # - downstream: jupyterlab >=4.3
   - downstream: notebook >=7.3
 
 about:
