@@ -2,7 +2,8 @@
 schema_version: 1
 
 context:
-  version: 2.17.0
+  version: "2.17.0"
+  python_check_max: "3.14"
 
 package:
   name: jupyter_server
@@ -17,7 +18,7 @@ source:
   sha256: c38ea898566964c888b4772ae1ed58eca84592e88251d2cfc4d171f81f7e99d5
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
@@ -60,7 +61,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - 3.13.*
+        - ${{ python_check_max }}.*
   - files:
       recipe:
         - run_test.py
@@ -82,9 +83,9 @@ tests:
       - jupyter server -h
       - jupyter-server -h
       - python run_test.py
-  # TODO: restore downstreams
-  # - downstream: jupyterlab >=3.2
-  # - downstream: jupyterlab_server >=2.20.0
+  - downstream: jupyterlab_server >=2.20.0
+  # - downstream: jupyterlab >=4.3
+  - downstream: notebook >=7.3
 
 about:
   license: BSD-3-Clause
