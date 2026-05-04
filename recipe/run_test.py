@@ -16,6 +16,9 @@ SKIPS = [
     "delete",
     # ???
     "merge_config",
+    # interacts badly with isolated env in rattler-build
+    # https://github.com/conda-forge/jupyter_server-feedstock/pull/165
+    "regression_is_hidden",
 ]
 
 # -k doesn't like singletons in parentheses

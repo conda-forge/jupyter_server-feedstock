@@ -22,6 +22,7 @@ build:
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+    - npm install --ignore-scripts
   python:
     entry_points:
       - jupyter-server = jupyter_server.serverapp:main
@@ -89,7 +90,9 @@ tests:
 
 about:
   license: BSD-3-Clause
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - node_modules/bootstrap/LICENSE
   summary: The backend—i.e. core services, APIs, and REST endpoints to Jupyter web applications.
   homepage: https://jupyter-server.readthedocs.io
   repository: https://github.com/jupyter/jupyter_server
