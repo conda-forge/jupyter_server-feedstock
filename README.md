@@ -144,7 +144,9 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@Carreau](https://github.com/Carreau/)
 * [@SylvainCorlay](https://github.com/SylvainCorlay/)
+* [@Yann-P](https://github.com/Yann-P/)
 * [@Zsailer](https://github.com/Zsailer/)
 * [@blink1073](https://github.com/blink1073/)
 * [@bollwyvl](https://github.com/bollwyvl/)
