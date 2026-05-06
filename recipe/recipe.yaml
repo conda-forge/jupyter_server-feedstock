@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "2.18.1"
+  version: "2.18.2"
   python_check_max: "3.14"
 
 package:
@@ -15,7 +15,7 @@ source:
     - https://pypi.org/packages/source/j/jupyter-server/jupyter_server-${{ version }}.tar.gz
     # fall back to the GitHub release assset (_not_ a snapshot)
     - https://github.com/jupyter-server/jupyter_server/releases/download/v${{ version }}/jupyter_server-${{ version }}.tar.gz
-  sha256: f62be526369b791625e03bd658070563c1a4e9a0a2f439ea1f9dbacea5f7191a
+  sha256: 06b4f40d8a7a00bb39d5216859c81374a0e7cfefe6d8a5a7facc5a5c37c679a7
 
 build:
   number: 0
