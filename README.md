@@ -42,31 +42,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `jupyter_server` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install jupyter_server
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install jupyter_server
 ```
 
-It is possible to list all of the versions of `jupyter_server` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add jupyter_server
+# for installing globally
+pixi global install jupyter_server
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `jupyter_server` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search jupyter_server --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search jupyter_server --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search jupyter_server --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -78,6 +120,8 @@ mamba repoquery whoneeds jupyter_server --channel conda-forge
 # List dependencies of `jupyter_server`:
 mamba repoquery depends jupyter_server --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
