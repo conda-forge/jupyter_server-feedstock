@@ -86,8 +86,9 @@ tests:
       - python run_test.py
   # https://github.com/conda-forge/jupyterlab-feedstock/issues/466
   # - downstream: jupyterlab >=4.3
-  - downstream: jupyterlab_server >=2.20.0
-  - downstream: notebook >=7.3
+  # TODO: restore as rebuilt with `python_min: 3.11`
+  # - downstream: jupyterlab_server >=2.20.0
+  # - downstream: notebook >=7.3
 
 about:
   license: BSD-3-Clause
